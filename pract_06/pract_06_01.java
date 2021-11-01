@@ -26,6 +26,11 @@ class Complex { // класс комплексных чисел
 		if (im != 0) {
 			output += String.valueOf(im) + "i";
 		}
+		else {
+			if (re == 0) {
+				output += "0";
+			}
+		}
 		return output;
 	}
 	public Complex plus(Complex z) { // метод сложения комплексных чисел

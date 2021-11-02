@@ -62,6 +62,11 @@ public class pract_07_03 { // основной класс
 		System.out.println("Квадратное уравнение имеет вид:\nax^2+bx+c=0");
 		System.out.print("a=");
 		double a = sc.nextDouble();
+		while (a == 0) {
+			System.out.println("В квадратном уравнении коэффициент a не может быть равен 0");
+			System.out.print("a=");
+			a = sc.nextDouble();
+		}
 		System.out.print("b=");
 		double b = sc.nextDouble();
 		System.out.print("c=");

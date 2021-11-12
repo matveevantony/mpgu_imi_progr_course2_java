@@ -48,7 +48,7 @@ public class pract_07_02 { // основной класс
 				points[j][i] = sc.nextDouble();
 			}
 		}
-		double p = 0; // вычисление периметра пятиугольника
+		double p = (new Segment(points[0][0],points[1][0],points[0][4],points[1][4])).length(); // вычисление периметра пятиугольника
 		for (int i = 0; i < 4; i++) {
 			Segment temp = new Segment(points[0][i],points[1][i],points[0][i+1],points[1][i+1]);
 			p += temp.length();

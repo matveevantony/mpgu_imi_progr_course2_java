@@ -114,11 +114,19 @@ public class pract_11_01 { // основной класс
 	public static Figure randomFigure() { // функция (статический метод) создания случайной фигуры
 		int i = (int)(Math.random() * 3);
 		if (i == 0) {
-			return new Circle((int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random()*6));
+			return new Circle((int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random()*5) + 1);
 		}
 		if (i == 1) {
-			return new Rectangle((int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10);
+			int x1=(int)(Math.random() * 21)-10;
+			int y1 = (int)(Math.random() * 21)-10;
+			int x2 = (int)(Math.random() * 21)-10;
+			int y2 = (int)(Math.random() * 21)-10;
+			while ((x1 == x2) || (y1 == y2)) {
+				x2 = (int)(Math.random() * 21)-10;
+				y2 = (int)(Math.random() * 21)-10;
+			}
+			return new Rectangle(x1, y1, x2, y2);
 		}
-		return new Square((int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random()*6));
+		return new Square((int)(Math.random() * 21)-10, (int)(Math.random() * 21)-10, (int)(Math.random()*5) + 1);
 	}
 }
